@@ -1,3 +1,33 @@
+-- --- WHITELIST LUA CODEBY ---
+
+local jugador = game.Players.LocalPlayer
+
+-- Lista directa de usuarios autorizados
+
+local whitelist = {
+
+    [123456789] = "JugadorUno",
+
+    [5204076010] = "JugadorDos",
+
+    [85437] = "DX_UNO2",
+
+    [8144772386] = "bandidokINT",
+
+}
+
+-- Verificación
+
+if not whitelist[jugador.UserId] then
+
+    jugador:Kick("🖕paga tu vaina mardito")
+
+else
+
+    print("✅ Acceso concedido a "..jugador.Name.." | Nombre whitelist: "..whitelist[jugador.UserId])
+
+end
+
 --[[
 
 GUI: Codeby
